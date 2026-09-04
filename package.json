@@ -1,12 +1,8 @@
 {
-  "name": "mr-hulla",
-  "version": "0.2.1",
-  "description": "Minimal experimental package — npx mr-hulla prints hello, from mr hulla",
-  "keywords": [
-    "cli",
-    "experimental",
-    "hello"
-  ],
+  "name": "mr-hulla-root",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Workspace root for the mr-hulla monorepo (never published)",
   "homepage": "https://github.com/zzacong/mr-hulla#readme",
   "bugs": {
     "url": "https://github.com/zzacong/mr-hulla/issues"
@@ -17,32 +13,16 @@
     "type": "git",
     "url": "git+ssh://git@github.com/zzacong/mr-hulla.git"
   },
-  "bin": {
-    "mr-hulla": "./dist/cli.js"
-  },
-  "files": [
-    "dist"
-  ],
   "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  },
   "scripts": {
-    "build": "tsdown",
-    "test": "vitest run",
-    "typecheck": "tsc --noEmit",
-    "lint": "oxlint src",
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "typecheck": "pnpm -r run typecheck",
+    "lint": "pnpm -r run lint",
+    "publint": "pnpm -r run publint",
     "format:check": "oxfmt --check .",
     "format": "oxfmt .",
-    "changeset": "changeset",
-    "prepublishOnly": "pnpm run build"
+    "changeset": "changeset"
   },
   "devDependencies": {
     "@changesets/cli": "^3.0.1",

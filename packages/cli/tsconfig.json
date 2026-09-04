@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      // Dev-time alias so typecheck/tests resolve the workspace dep to
+      // source. At runtime (built dist) this resolves via node_modules.
+      "mr-hulla-core": ["../core/src/index.ts"]
+    }
+  },
+  "include": ["src"]
+}

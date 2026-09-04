@@ -20,7 +20,8 @@ jobs:
           runtime: node@22
           cache: true
           require-lockfile: true
-      - run: pnpm run lint
-      - run: pnpm run typecheck
-      - run: pnpm test
-      - run: pnpm run build
+      - run: pnpm -r run lint
+      - run: pnpm -r run typecheck
+      - run: pnpm -r run test
+      - run: pnpm -r run build
+      - run: pnpm -r run publint
