@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.2
+
+### Patch Changes
+
+- cc57f72: Trim the name argument, falling back to the default greeting on blank input.
+
 ## 0.3.1
 
 ### Patch Changes
