@@ -39,7 +39,10 @@ First-ever publish is manual from a maintainer laptop after `npm login`:
 
 ```sh
 pnpm run build
-pnpm publish --access public --provenance
+pnpm publish --access public
 ```
+
+No `--provenance` here: provenance needs a CI OIDC identity and fails on a
+laptop. It switches on automatically once CI publishes via trusted publishing.
 
 Then configure npm trusted publisher (`package → Settings → Trusted Publisher`: repo `zzacong/mr-hulla`, workflow `release.yml`).
