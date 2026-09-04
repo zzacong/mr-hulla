@@ -1,0 +1,60 @@
+{
+  "name": "mr-hulla",
+  "version": "0.1.0",
+  "description": "Minimal experimental package — npx mr-hulla prints hello, from mr hulla",
+  "keywords": [
+    "cli",
+    "experimental",
+    "hello"
+  ],
+  "homepage": "https://github.com/zzacong/mr-hulla#readme",
+  "bugs": {
+    "url": "https://github.com/zzacong/mr-hulla/issues"
+  },
+  "license": "MIT",
+  "author": "zzacong <zacong.dev@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zzacong/mr-hulla.git"
+  },
+  "bin": {
+    "mr-hulla": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint src",
+    "format:check": "oxfmt --check .",
+    "format": "oxfmt .",
+    "changeset": "changeset",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.1",
+    "@types/node": "^26.4.1",
+    "oxfmt": "^0.66.0",
+    "oxlint": "^1.81.0",
+    "publint": "^0.3.24",
+    "tsdown": "^0.22.14",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
