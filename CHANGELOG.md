@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0
+
+### Minor Changes
+
+- 9aa8669: Add optional name argument to `hello()`; `mr-hulla <name>` greets that name
+
+### Patch Changes
+
+- 68e46d4: Add an exclamation mark to the greeting
+
 ## 0.1.1
 
 ### Patch Changes
