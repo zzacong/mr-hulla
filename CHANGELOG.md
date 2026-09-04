@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1-beta.1
+
+### Patch Changes
+
+- c9d6b32: Greet with yo instead of hey
+
 ## 0.2.1-beta.0
 
 ### Patch Changes
