@@ -21,7 +21,10 @@
     "mr-hulla": "./dist/cli.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "type": "module",
   "publishConfig": {
