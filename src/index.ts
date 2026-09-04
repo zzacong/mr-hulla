@@ -1,3 +1,3 @@
-export function hello(): string {
-  return "hello, from mr hulla!";
+export function hello(name = "mr hulla"): string {
+  return `hello, from ${name}!`;
 }

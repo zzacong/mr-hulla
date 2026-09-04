@@ -1,11 +1,12 @@
 # mr-hulla
 
-Minimal experimental package. `npx mr-hulla` prints `hello, from mr hulla`.
+Minimal experimental package. `npx mr-hulla` prints `hello, from mr hulla!`.
 
 ## Use
 
 ```sh
-npx mr-hulla
+npx mr-hulla          # hello, from mr hulla!
+npx mr-hulla ada      # hello, from ada!
 ```
 
 As a library:
@@ -13,7 +14,7 @@ As a library:
 ```ts
 import { hello } from "mr-hulla";
 
-console.log(hello()); // hello, from mr hulla
+console.log(hello()); // hello, from mr hulla!
 ```
 
 Requires Node `>=20`.
