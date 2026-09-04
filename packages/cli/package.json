@@ -1,6 +1,6 @@
 {
   "name": "mr-hulla",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Minimal experimental package — npx mr-hulla prints hello, from mr hulla",
   "keywords": [
     "cli",
