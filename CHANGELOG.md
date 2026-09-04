@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1-beta.0
+
+### Patch Changes
+
+- 9effbcc: Greet with hey instead of hello
+
 ## 0.2.0
 
 ### Minor Changes
