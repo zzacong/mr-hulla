@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.1
+
+### Patch Changes
+
+- cec8a00: Document the yo greeting in the README
+- c9d6b32: Greet with yo instead of hey
+- 9effbcc: Greet with hey instead of hello
+
 ## 0.2.1-beta.1
 
 ### Patch Changes
