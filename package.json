@@ -34,18 +34,6 @@
     "typescript": "^7.0.2",
     "vitest": "^4.1.11"
   },
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "11.25.0",
-      "onFail": "error"
-    },
-    "runtime": {
-      "name": "node",
-      "version": "22",
-      "onFail": "error"
-    }
-  },
   "engines": {
     "node": ">=20"
   },
