@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.1
+
+### Patch Changes
+
+- c3168ae: Ship README, LICENSE, and CHANGELOG in the published packages.
+- Updated dependencies [c3168ae]
+  - mr-hulla-core@0.3.1
+
 ## 0.3.0
 
 ### Patch Changes
