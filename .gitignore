@@ -6,3 +6,10 @@ coverage/
 .DS_Store
 .env
 .env.local
+# Prebuilt Go binaries (gitignored, but published via files: ["bin"];
+# built by the mr-hulla-go wrapper before pack/publish)
+packages/go-darwin-arm64/bin/
+packages/go-darwin-amd64/bin/
+packages/go-linux-x64/bin/
+packages/go-linux-arm64/bin/
+packages/go-windows-x64/bin/

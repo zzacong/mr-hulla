@@ -1,0 +1,35 @@
+{
+  "name": "mr-hulla-go-windows-x64",
+  "version": "0.1.0",
+  "description": "Prebuilt mr-hulla-go binary for windows/x64. Installed automatically via mr-hulla-go — do not install directly.",
+  "homepage": "https://github.com/zzacong/mr-hulla#readme",
+  "bugs": {
+    "url": "https://github.com/zzacong/mr-hulla/issues"
+  },
+  "license": "MIT",
+  "author": "zzacong <zacong.dev@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zzacong/mr-hulla.git"
+  },
+  "files": [
+    "bin"
+  ],
+  "os": [
+    "windows"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "echo 'mr-hulla-go-windows-x64: built by mr-hulla-go'",
+    "test": "echo 'mr-hulla-go-windows-x64: tested via mr-hulla-go'",
+    "typecheck": "echo 'mr-hulla-go-windows-x64: no types (binary only)'",
+    "lint": "echo 'mr-hulla-go-windows-x64: nothing to lint (binary only)'",
+    "publint": "publint"
+  }
+}

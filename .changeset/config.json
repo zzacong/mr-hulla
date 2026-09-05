@@ -2,7 +2,16 @@
   "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
   "changelog": "@changesets/cli/changelog",
   "commit": false,
-  "fixed": [],
+  "fixed": [
+    [
+      "mr-hulla-go",
+      "mr-hulla-go-darwin-arm64",
+      "mr-hulla-go-darwin-amd64",
+      "mr-hulla-go-linux-x64",
+      "mr-hulla-go-linux-arm64",
+      "mr-hulla-go-windows-x64"
+    ]
+  ],
   "linked": [],
   "access": "public",
   "baseBranch": "main",

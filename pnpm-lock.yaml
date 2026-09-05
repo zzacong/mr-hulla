@@ -41,6 +41,34 @@ importers:
 
   packages/core: {}
 
+  packages/go-darwin-amd64: {}
+
+  packages/go-darwin-arm64: {}
+
+  packages/go-linux-arm64: {}
+
+  packages/go-linux-x64: {}
+
+  packages/go-windows-x64: {}
+
+  packages/gotool:
+    optionalDependencies:
+      mr-hulla-go-darwin-amd64:
+        specifier: workspace:*
+        version: link:../go-darwin-amd64
+      mr-hulla-go-darwin-arm64:
+        specifier: workspace:*
+        version: link:../go-darwin-arm64
+      mr-hulla-go-linux-arm64:
+        specifier: workspace:*
+        version: link:../go-linux-arm64
+      mr-hulla-go-linux-x64:
+        specifier: workspace:*
+        version: link:../go-linux-x64
+      mr-hulla-go-windows-x64:
+        specifier: workspace:*
+        version: link:../go-windows-x64
+
 packages:
 
   '@changesets/apply-release-plan@8.0.0':
