@@ -1,6 +1,6 @@
 {
   "name": "mr-hulla-go-darwin-amd64",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Prebuilt mr-hulla-go binary for darwin/x64. Installed automatically via mr-hulla-go — do not install directly.",
   "homepage": "https://github.com/zzacong/mr-hulla#readme",
   "bugs": {
