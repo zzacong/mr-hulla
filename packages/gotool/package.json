@@ -1,6 +1,6 @@
 {
   "name": "mr-hulla-go",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Minimal experimental CLI in Go — mr-hulla-go prints yo, from mr hulla (npm wrapper installs the right prebuilt binary)",
   "keywords": [
     "cli",

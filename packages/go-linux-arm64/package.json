@@ -1,6 +1,6 @@
 {
   "name": "mr-hulla-go-linux-arm64",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Prebuilt mr-hulla-go binary for linux/arm64 (gnu). Installed automatically via mr-hulla-go — do not install directly.",
   "homepage": "https://github.com/zzacong/mr-hulla#readme",
   "bugs": {
