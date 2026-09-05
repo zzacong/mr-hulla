@@ -4,6 +4,7 @@
 // of the wrapper, so require.resolve finds it under any package manager
 // layout (including pnpm's non-hoisted node_modules).
 import { spawnSync } from "node:child_process";
+import { accessSync, chmodSync, constants } from "node:fs";
 import { createRequire } from "node:module";
 import { join } from "node:path";
 
@@ -23,15 +24,24 @@ if (!entry) {
 }
 
 const require = createRequire(import.meta.url);
-let pkgDir;
+let binPath;
 try {
-  pkgDir = join(require.resolve(`${entry.pkg}/package.json`), "..");
+  const pkgDir = join(require.resolve(`${entry.pkg}/package.json`), "..");
+  binPath = join(pkgDir, "bin", entry.bin);
 } catch {
   console.error(`mr-hulla-go: platform package ${entry.pkg} is not installed`);
   process.exit(1);
 }
 
-const result = spawnSync(join(pkgDir, "bin", entry.bin), process.argv.slice(2), {
+// Belt-and-suspenders: if the binary landed without the exec bit (some
+// packers normalize tarball modes), fix it before spawning.
+try {
+  accessSync(binPath, constants.X_OK);
+} catch {
+  chmodSync(binPath, 0o755);
+}
+
+const result = spawnSync(binPath, process.argv.slice(2), {
   stdio: "inherit",
 });
 if (result.error) {

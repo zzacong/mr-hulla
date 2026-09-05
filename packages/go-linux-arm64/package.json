@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+ssh://git@github.com/zzacong/mr-hulla.git"
   },
+  "bin": {
+    "mr-hulla-go-linux-arm64": "./bin/mr-hulla-go"
+  },
   "files": [
     "bin"
   ],
