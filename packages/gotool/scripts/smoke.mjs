@@ -10,8 +10,8 @@ const launcher = join(dirname(dirname(fileURLToPath(import.meta.url))), "bin", "
 
 const run = (...args) => execFileSync("node", [launcher, ...args], { encoding: "utf8" });
 
-assert.strictEqual(run("ada"), "yo, from ada!\n");
-assert.strictEqual(run(), "yo, from mr hulla!\n");
-assert.strictEqual(run("   "), "yo, from mr hulla!\n");
+assert.strictEqual(run("ada"), "yo, from ada (go)!\n");
+assert.strictEqual(run(), "yo, from mr hulla (go)!\n");
+assert.strictEqual(run("   "), "yo, from mr hulla (go)!\n");
 
 console.log("smoke: mr-hulla-go launcher ok");

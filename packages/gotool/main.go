@@ -14,7 +14,7 @@ func greeting(name string) string {
 	} else {
 		name = strings.TrimSpace(name)
 	}
-	return fmt.Sprintf("yo, from %s!", name)
+	return fmt.Sprintf("yo, from %s (go)!", name)
 }
 
 func main() {

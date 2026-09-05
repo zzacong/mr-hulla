@@ -8,10 +8,10 @@ func TestGreeting(t *testing.T) {
 		input string
 		want  string
 	}{
-		{"default on empty", "", "yo, from mr hulla!"},
-		{"default on blank", "   ", "yo, from mr hulla!"},
-		{"greets a given name", "ada", "yo, from ada!"},
-		{"trims surrounding space", "  ada  ", "yo, from ada!"},
+		{"default on empty", "", "yo, from mr hulla (go)!"},
+		{"default on blank", "   ", "yo, from mr hulla (go)!"},
+		{"greets a given name", "ada", "yo, from ada (go)!"},
+		{"trims surrounding space", "  ada  ", "yo, from ada (go)!"},
 	}
 
 	for _, tc := range cases {
