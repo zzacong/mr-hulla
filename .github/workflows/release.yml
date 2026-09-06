@@ -25,7 +25,7 @@ jobs:
       # packages before changesets publishes them.
       - uses: actions/setup-go@v5
         with:
-          go-version-file: packages/gotool/go.mod
+          go-version-file: packages/mr-hulla-go/go.mod
       - run: pnpm run build
       # Node 22 ships npm 10; OIDC trusted publishing needs npm >= 11.5.1.
       - run: npm install -g npm@latest

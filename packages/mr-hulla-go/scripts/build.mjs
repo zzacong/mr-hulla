@@ -16,14 +16,14 @@ const TARGETS = [
   { dir: "go-windows-x64", goos: "windows", goarch: "amd64", out: "mr-hulla-go.exe" },
 ];
 
-const gotool = dirname(dirname(fileURLToPath(import.meta.url)));
-const packages = dirname(gotool);
+const wrapperDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const packages = dirname(wrapperDir);
 
 for (const target of TARGETS) {
   const out = join(packages, target.dir, "bin", target.out);
   mkdirSync(dirname(out), { recursive: true });
   execFileSync("go", ["build", "-trimpath", "-o", out, "."], {
-    cwd: gotool,
+    cwd: wrapperDir,
     env: {
       ...process.env,
       CGO_ENABLED: "0",

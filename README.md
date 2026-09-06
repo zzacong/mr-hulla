@@ -6,14 +6,22 @@ This repo is a pnpm monorepo with three distributions:
 
 - [`mr-hulla-core`](packages/core) — the library (`hello()` lives here).
 - [`mr-hulla`](packages/cli) — the CLI. Depends on `mr-hulla-core` via `workspace:*`, so the two always build and ship from the same source.
-- [`mr-hulla-go`](packages/gotool) — the same greeting in Go. An npm wrapper installs the prebuilt binary for your platform (darwin/linux on arm64/x64, windows on x64) from five `mr-hulla-go-<os>-<arch>` platform packages.
+- [`mr-hulla-go`](packages/mr-hulla-go) — the same greeting in Go. An npm wrapper installs the prebuilt binary for your platform (darwin/linux on arm64/x64, windows on x64) from five `mr-hulla-go-<os>-<arch>` platform packages.
 
 ## Use
 
 ```sh
 npx mr-hulla          # yo, from mr hulla!
 npx mr-hulla ada      # yo, from ada!
-npx mr-hulla-go ada   # yo, from ada! (Go binary, no build step)
+npx mr-hulla-go       # yo, from mr hulla (go)! (Go binary, no build step)
+npx mr-hulla-go ada   # yo, from ada (go)!
+```
+
+## Install
+
+```sh
+npm i -g mr-hulla mr-hulla-go   # prebuilt npm distributions
+go install github.com/zzacong/mr-hulla/packages/mr-hulla-go@latest  # Go from source, installs as `mr-hulla-go`
 ```
 
 As a library (install `mr-hulla-core`, not `mr-hulla`):
@@ -24,7 +32,7 @@ import { hello } from "mr-hulla-core";
 console.log(hello()); // yo, from mr hulla!
 ```
 
-Requires Node `>=20`.
+Requires Node `>=20`. The `go install` path needs Go `>=1.25`.
 
 ## Develop
 
